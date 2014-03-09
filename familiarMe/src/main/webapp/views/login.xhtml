@@ -1,0 +1,21 @@
+<ui:composition template="template/template.xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	<ui:define name="content">
+		<h:form>
+			<p:panelGrid columns="2">
+				<f:facet name="header">
+					<p:outputLabel value="ورود" />
+				</f:facet>
+
+				<p:outputLabel value="نام کاربری" />
+				<p:inputText />
+				<p:outputLabel value="رمز عبور" />
+				<p:password />
+
+			</p:panelGrid>
+		</h:form>
+	</ui:define>
+</ui:composition>

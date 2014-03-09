@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:ui="http://java.sun.com/jsf/facelets">
-<head>
-<title><ui:insert name="title">Default title</ui:insert></title>
-</head>
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui" lang="fa" dir="rtl">
 
-<body>
+<h:head>
+	<title><ui:insert name="title">Default title</ui:insert></title>
+	<h:outputStylesheet library="css" name="style.css"></h:outputStylesheet>
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.1.1/css/bootstrap.min.css"></h:outputStylesheet>
+</h:head>
+
+<h:body>
 	<ui:debug hotkey="x"
 		rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
-	<div id="menu">
-		<ui:insert name="menu">
+	<div id="wrapper">
+		<div id="menu">
+			<ui:insert name="menu">
 			Menu
 		</ui:insert>
-	</div>
-	<div id="header">
-		<ui:insert name="header">
+		</div>
+		<div id="header">
+			<ui:insert name="header">
     	Header area.
 		</ui:insert>
-	</div>
+		</div>
 
 
-	<div id="content">
-		<ui:insert name="content">
+		<div id="content">
+			<ui:insert name="content">
     	Content area
 		</ui:insert>
-	</div>
+		</div>
 
-	<div id="footer">
-		<ui:insert name="footer">
+		<div id="footer">
+			<ui:insert name="footer">
     	Footer area.
 		</ui:insert>
+		</div>
 	</div>
-
-</body>
+</h:body>
 
 </html>

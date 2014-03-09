@@ -3,7 +3,77 @@ html {
 	padding: 0px;
 }
 
-div#main-wrapper {
+div#wrapper {
 	width: 960px;
 	margin: 0px auto;
+}
+
+span {
+	width: 40px;
+	display: block;
+	position: relative;
+	height: 40px;
+}
+
+.score {
+	width: 40px;
+	text-align: center;
+}
+
+.voteUp {
+	height: 20px;
+}
+
+.voteUp:before {
+	content: '';
+	height: 0;
+	width: 0;
+	display: block;
+	border: 20px transparent solid;
+	border-top-width: 0;
+	border-bottom-color: #333;
+}
+
+.voteDown {
+	height: 20px;
+}
+
+.voteDown:before {
+	content: '';
+	height: 0;
+	width: 0;
+	display: block;
+	border: 20px transparent solid;
+	border-bottom-width: 0;
+	border-top-color: #333;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.accept:after,.accept:before {
+	content: '';
+	height: 32px;
+	width: 10px;
+	display: block;
+	background: #333;
+	position: absolute;
+	top: 6px;
+	left: 18px;
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+	-moz-transform: rotate(45deg);
+	-o-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+}
+
+.accept:before {
+	height: 16px;
+	transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	top: 18px;
+	left: 6px;
 }
